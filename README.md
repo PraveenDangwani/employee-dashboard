@@ -1,69 +1,78 @@
-# React + TypeScript + Vite
+# 🧑‍💼 Employee Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A feature-rich, responsive Employee Dashboard built with **React**, **TypeScript**, and **AG Grid**. This dashboard enables efficient employee data visualization with performance optimizations, theming support, and modular architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [https://employee-dashboard-lake-mu.vercel.app/](https://employee-dashboard-lake-mu.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ⚙️ Built with **AG Grid** for advanced data grid functionality
+- 🌗 **Light / Dark Mode Toggle** using Context API
+- 🔍 **Debounced Global Search** with Quick Filter
+- 📱 Fully **Responsive Design**
+- 💬 **Custom Tooltips** for columns
+- 🔁 **Virtualization & Windowing** for performance
+- 💡 **Custom Hooks** following SOLID principles
+- 🧠 **Modular Component Structure** for scalability
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Dashboard.tsx
+│   ├── EmployeeGrid.tsx
+│   └── grid/
+│       ├── columnDefs.ts
+│       └── types.ts
+├── context/
+│   └── theme/
+│       ├── ThemeContext.tsx
+│       └── useTheme.ts
+├── hooks/
+│   └── useDebounce.ts
+├── data/
+│   └── assessment_data.json
+├── App.css
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Tech Stack
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React + TypeScript
+- AG Grid (Community)
+- Context API
+- Vite
+- Custom Hooks
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/employee-dashboard.git
+cd employee-dashboard
 ```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Run the application**
+```bash
+npm run dev
+```
+
+---
